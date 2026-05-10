@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Local -->
+  <title>PMS Finitions — Peinture, vitrerie et finitions à Sautron</title>
+  <meta name="description" content="PMS Finitions accompagne particuliers et professionnels dans leurs travaux de peinture, vitrerie et finitions à Sautron, Nantes et les communes voisines." />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="FR-44" />
+  <meta name="geo.placename" content="Sautron, Loire-Atlantique" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PMS Finitions — Peinture, vitrerie et finitions à Sautron" />
+  <meta property="og:description" content="PMS Finitions accompagne particuliers et professionnels dans leurs travaux de peinture, vitrerie et finitions à Sautron, Nantes et les communes voisines." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#F7F3ED" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --ivory:       #F7F3ED;
+      --beige:       #E8DED0;
+      --taupe:       #B8A894;
+      --anthracite:  #2E3235;
+      --vert:        #465A56;
+      --vert-dark:   #374845;
+      --blanc:       #FFFFFF;
+      --brun:        #74695C;
+      --greige:      #EDE8E1;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Manrope', system-ui, sans-serif;
+
+      --radius-sm: 0.5rem;
+      --radius-md: 1rem;
+      --radius-lg: 1.5rem;
+      --radius-xl: 2rem;
+
+      --shadow-sm: 0 2px 10px rgba(46,50,53,0.05);
+      --shadow-md: 0 8px 28px rgba(46,50,53,0.08);
+      --shadow-lg: 0 20px 52px rgba(46,50,53,0.11);
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition: all 0.4s var(--ease-out);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--ivory);
+      color: var(--anthracite);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    button { border: none; cursor: pointer; font-family: inherit; background: none; }
+    ul, ol { list-style: none; }
+    input, textarea, select {
+      font-family: var(--font-body);
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 600; }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.75rem); font-weight: 500; }
+    h3 { font-size: clamp(1.1rem, 1.8vw, 1.35rem); font-weight: 500; }
+    p  { line-height: 1.8; }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .section      { padding: 6rem 0; }
+    .section--lg  { padding: 8rem 0; }
+    .section--xl  { padding: 10rem 0; }
+
+    /* ============================================================
+       COMPONENTS — BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2.1rem;
+      border-radius: 3rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: var(--transition);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn--primary {
+      background: var(--vert);
+      color: var(--ivory);
+      box-shadow: 0 4px 18px rgba(70,90,86,0.22);
+    }
+    .btn--primary:hover {
+      background: var(--vert-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(70,90,86,0.3);
+    }
+    .btn--primary:active { transform: translateY(0) scale(0.98); }
+    .btn--secondary {
+      background: transparent;
+      color: var(--anthracite);
+      border: 1.5px solid var(--taupe);
+    }
+    .btn--secondary:hover {
+      background: var(--beige);
+      border-color: var(--brun);
+      transform: translateY(-2px);
+    }
+    .btn--secondary:active { transform: translateY(0) scale(0.98); }
+    .btn--ghost-light {
+      background: rgba(247,243,237,0.12);
+      color: var(--ivory);
+      border: 1.5px solid rgba(247,243,237,0.25);
+    }
+    .btn--ghost-light:hover {
+      background: rgba(247,243,237,0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn-arrow {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s var(--ease-out);
+    }
+    .btn:hover .btn-arrow { transform: translateX(3px); }
+
+    /* ============================================================
+       COMPONENTS — SECTION HEADER
+    ============================================================ */
+    .section-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--vert);
+      margin-bottom: 0.875rem;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--brun);
+      line-height: 1.8;
+      max-width: 62ch;
+    }
+
+    /* ============================================================
+       ANIMATIONS — KEYFRAMES
+    ============================================================ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+    @keyframes imageReveal {
+      from { opacity: 0; transform: scale(0.96); }
+      to   { opacity: 1; transform: scale(1);    }
+    }
+    @keyframes slideLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to   { opacity: 1; transform: translateX(0);     }
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(1.3); }
+    }
+
+    /* Scroll-reveal classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+    }
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+    }
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Stagger children */
+    .stagger-reveal > * {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
+    }
+    .stagger-reveal.visible > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal, .reveal-left, .reveal-right, .stagger-reveal > * {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.4rem 0;
+      transition: background 0.4s var(--ease-out), padding 0.4s var(--ease-out), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .header.scrolled {
+      background: rgba(247,243,237,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(184,168,148,0.22);
+      box-shadow: 0 4px 22px rgba(46,50,53,0.06);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .header__logo {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .header__logo-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--anthracite);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .header__logo-sub {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--brun);
+    }
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+    .header__nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--anthracite);
+      position: relative;
+      transition: color 0.3s ease;
+      padding-bottom: 2px;
+    }
+    .header__nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--vert);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s var(--ease-out);
+    }
+    .header__nav-link:hover { color: var(--vert); }
+    .header__nav-link:hover::after { transform: scaleX(1); }
+
+    .header__cta { flex-shrink: 0; }
+
+    /* Burger button */
+    .header__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0.5rem;
+      z-index: 210;
+      position: relative;
+    }
+    .header__burger-line {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--anthracite);
+      border-radius: 2px;
+      transition: all 0.35s var(--ease-out);
+      transform-origin: center;
+    }
+    .header__burger.open .header__burger-line:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+    .header__burger.open .header__burger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .header__burger.open .header__burger-line:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    /* Mobile overlay */
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(46,50,53,0.55);
+      z-index: 140;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .mobile-overlay.open { opacity: 1; pointer-events: all; }
+
+    /* Mobile menu drawer */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(340px, 88vw);
+      background: var(--anthracite);
+      z-index: 200;
+      padding: 5.5rem 2.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateX(100%);
+      transition: transform 0.45s var(--ease-out);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .mobile-menu__link {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ivory);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: color 0.25s ease;
+      display: block;
+    }
+    .mobile-menu__link:hover { color: var(--taupe); }
+    .mobile-menu__footer {
+      padding-top: 2rem;
+    }
+    .mobile-menu__tagline {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,237,0.35);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      background-color: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero__texture {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/lot-05_textures-assets-design/34_texture_enduit_beige.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 5.5rem 0 4rem;
+    }
+    .hero__content { position: relative; }
+    .hero__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s var(--ease-out) 0.1s forwards;
+    }
+    .hero__eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--vert);
+      animation: pulse-dot 2.5s ease-in-out infinite;
+    }
+    .hero__eyebrow-text {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brun);
+    }
+    .hero__title {
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out) 0.22s forwards;
+    }
+    .hero__title em {
+      font-style: italic;
+      color: var(--brun);
+    }
+    .hero__subtitle {
+      font-size: 1.05rem;
+      color: var(--brun);
+      line-height: 1.85;
+      margin-bottom: 2.75rem;
+      max-width: 52ch;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out) 0.38s forwards;
+    }
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.875rem;
+      margin-bottom: 2.75rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out) 0.52s forwards;
+    }
+    .hero__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out) 0.66s forwards;
+    }
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--brun);
+      padding: 0.4rem 0.9rem;
+      background: var(--beige);
+      border-radius: 2rem;
+      border: 1px solid rgba(184,168,148,0.3);
+    }
+    .hero__badge-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--taupe);
+    }
+
+    /* Hero visual */
+    .hero__visual {
+      position: relative;
+      opacity: 0;
+      animation: imageReveal 1s var(--ease-out) 0.25s forwards;
+    }
+    .hero__img-container {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .hero__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-out);
+    }
+    .hero__img-container:hover .hero__img { transform: scale(1.03); }
+
+    /* Floating badge on hero image */
+    .hero__float-card {
+      position: absolute;
+      bottom: 2.25rem;
+      left: -2.25rem;
+      background: var(--blanc);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.4rem;
+      box-shadow: var(--shadow-lg);
+      min-width: 168px;
+      opacity: 0;
+      animation: slideLeft 0.8s var(--ease-out) 1s forwards;
+    }
+    .hero__float-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--vert);
+      margin-bottom: 0.4rem;
+    }
+    .hero__float-card-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--vert);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    .hero__float-card-value {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--anthracite);
+      line-height: 1.3;
+    }
+
+    /* Decorative accent behind hero image */
+    .hero__visual-accent {
+      position: absolute;
+      top: -2rem;
+      right: -2rem;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--vert);
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       TRUST BAR
+    ============================================================ */
+    .trust-bar {
+      background: var(--blanc);
+      padding: 3rem 0;
+      border-top: 1px solid rgba(184,168,148,0.18);
+      border-bottom: 1px solid rgba(184,168,148,0.18);
+    }
+    .trust-bar__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding: 0.75rem 2rem;
+      position: relative;
+    }
+    .trust-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 44px;
+      width: 1px;
+      background: rgba(184,168,148,0.25);
+    }
+    .trust-item__icon {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--greige);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.25rem;
+      flex-shrink: 0;
+    }
+    .trust-item__icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--vert);
+      stroke-width: 1.75;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .trust-item__title {
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--anthracite);
+    }
+    .trust-item__text {
+      font-size: 0.83rem;
+      color: var(--brun);
+      line-height: 1.55;
+      max-width: none;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    .about { background: var(--ivory); }
+    .about__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    .about__img-wrap {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .about__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-out);
+    }
+    .about__img-wrap:hover .about__img { transform: scale(1.03); }
+    .about__img-accent {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      width: 100px;
+      height: 100px;
+      border-radius: var(--radius-lg);
+      background: var(--vert);
+      opacity: 0.09;
+      pointer-events: none;
+    }
+    .about__content {}
+    .about__body {
+      font-size: 1.03rem;
+      color: var(--brun);
+      margin-bottom: 1.25rem;
+    }
+    .about__stats {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+      margin-top: 2.75rem;
+      padding-top: 2.75rem;
+      border-top: 1px solid rgba(184,168,148,0.25);
+    }
+    .about__stat {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--anthracite);
+    }
+    .about__stat-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--vert);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    .services { background: var(--greige); }
+    .services__header {
+      text-align: center;
+      margin: 0 auto 3.5rem;
+      max-width: 700px;
+    }
+    .services__header h2 { margin-bottom: 1rem; }
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 370px 320px;
+      gap: 1.25rem;
+    }
+    .service-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: var(--blanc);
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.45s var(--ease-out), box-shadow 0.45s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-card:nth-child(1) { grid-column: 1 / 3; grid-row: 1; }
+    .service-card:nth-child(2) { grid-column: 3;     grid-row: 1; }
+    .service-card:nth-child(3) { grid-column: 1;     grid-row: 2; }
+    .service-card:nth-child(4) { grid-column: 2 / 4; grid-row: 2; }
+
+    .service-card__img-wrap {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .service-card__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s var(--ease-out);
+    }
+    .service-card:hover .service-card__img-wrap img { transform: scale(1.05); }
+
+    .service-card__content {
+      padding: 1.6rem 1.75rem;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(184,168,148,0.15);
+    }
+    .service-card__tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--vert);
+      margin-bottom: 0.5rem;
+    }
+    .service-card__title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--anthracite);
+      margin-bottom: 0.5rem;
+    }
+    .service-card__text {
+      font-size: 0.85rem;
+      color: var(--brun);
+      line-height: 1.65;
+      max-width: 52ch;
+    }
+
+    /* ============================================================
+       QUALITY
+    ============================================================ */
+    .quality {
+      background: var(--greige);
+      position: relative;
+    }
+    .quality::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/lot-05_textures-assets-design/35_texture_gris_chaud.png');
+      background-size: cover;
+      opacity: 0.03;
+      pointer-events: none;
+    }
+    .quality__inner {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 5.5rem;
+      align-items: center;
+      position: relative;
+    }
+    .quality__img-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .quality__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-out);
+    }
+    .quality__img-wrap:hover .quality__img { transform: scale(1.03); }
+    .quality__content {}
+    .quality__body {
+      font-size: 1.02rem;
+      color: var(--brun);
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+    .quality__points {
+      display: flex;
+      flex-direction: column;
+    }
+    .quality-point {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(184,168,148,0.22);
+    }
+    .quality-point:first-child { padding-top: 0; }
+    .quality-point:last-child  { border-bottom: none; padding-bottom: 0; }
+    .quality-point__num {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--taupe);
+      flex-shrink: 0;
+      width: 1.75rem;
+      padding-top: 0.2rem;
+      letter-spacing: 0.02em;
+    }
+    .quality-point__body {}
+    .quality-point__title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--anthracite);
+      margin-bottom: 0.4rem;
+    }
+    .quality-point__text {
+      font-size: 0.88rem;
+      color: var(--brun);
+      line-height: 1.65;
+    }
+
+    /* ============================================================
+       GALLERY
+    ============================================================ */
+    .gallery { background: var(--blanc); }
+    .gallery__header {
+      text-align: center;
+      margin: 0 auto 3.5rem;
+      max-width: 600px;
+    }
+    .gallery__header h2 { margin-bottom: 1rem; }
+    .gallery-grid {
+      columns: 3;
+      column-gap: 1.1rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1.1rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.55s var(--ease-out);
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(46,50,53,0.72) 0%, rgba(46,50,53,0.12) 50%, transparent 80%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem 1.35rem;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-label {
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--ivory);
+      letter-spacing: 0.02em;
+    }
+
+    /* ============================================================
+       METHOD / TIMELINE
+    ============================================================ */
+    .method { background: var(--ivory); }
+    .method__header {
+      text-align: center;
+      margin: 0 auto 4.5rem;
+      max-width: 640px;
+    }
+    .method__header h2 { margin-bottom: 1rem; }
+    .method__inner {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .method__steps {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .method__steps::before {
+      content: '';
+      position: absolute;
+      left: 1.25rem;
+      top: 3rem;
+      bottom: 3rem;
+      width: 1px;
+      background: rgba(184,168,148,0.35);
+    }
+    .method-step {
+      display: flex;
+      gap: 1.75rem;
+      align-items: flex-start;
+      padding: 1.5rem 0 1.5rem 0;
+      position: relative;
+    }
+    .method-step:last-child { padding-bottom: 0; }
+    .method-step__num {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: var(--blanc);
+      border: 2px solid var(--taupe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--vert);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .method-step:hover .method-step__num {
+      background: var(--vert);
+      border-color: var(--vert);
+      color: var(--ivory);
+    }
+    .method-step__content { padding-top: 0.25rem; }
+    .method-step__title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--anthracite);
+      margin-bottom: 0.4rem;
+    }
+    .method-step__text {
+      font-size: 0.875rem;
+      color: var(--brun);
+      line-height: 1.65;
+    }
+    .method__visual {
+      position: sticky;
+      top: 8rem;
+    }
+    .method__img-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .method__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .method__caption {
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: var(--taupe);
+      font-style: italic;
+      font-family: var(--font-display);
+      line-height: 1.55;
+    }
+
+    /* ============================================================
+       AREA / ZONE D'INTERVENTION
+    ============================================================ */
+    .area { background: var(--beige); }
+    .area__inner {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .area__content {}
+    .area__body {
+      font-size: 1.02rem;
+      color: var(--brun);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    .area__map {
+      width: 100%;
+      height: 220px;
+      border-radius: var(--radius-md);
+      border: none;
+      margin-bottom: 2rem;
+      display: block;
+      filter: grayscale(20%) contrast(0.95);
+      transition: filter 0.3s ease;
+    }
+    .area__map:hover { filter: grayscale(0%) contrast(1); }
+    .area__cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .city-badge {
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      background: var(--blanc);
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--anthracite);
+      border: 1.5px solid rgba(184,168,148,0.3);
+      transition: all 0.3s var(--ease-out);
+    }
+    .city-badge:hover {
+      background: var(--vert);
+      color: var(--ivory);
+      border-color: var(--vert);
+      transform: translateY(-2px);
+    }
+    .city-badge--main {
+      background: var(--vert);
+      color: var(--ivory);
+      border-color: var(--vert);
+      font-weight: 600;
+    }
+    .area__img-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .area__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-out);
+    }
+    .area__img-wrap:hover .area__img { transform: scale(1.04); }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    .contact {
+      background: var(--anthracite);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/lot-05_textures-assets-design/36_texture_anthracite_douce.png');
+      background-size: cover;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    .contact__header {
+      text-align: center;
+      margin: 0 auto 4rem;
+      max-width: 600px;
+      position: relative;
+    }
+    .contact__header .section-label { color: var(--taupe); }
+    .contact__header h2 { color: var(--ivory); margin-bottom: 1rem; }
+    .contact__header p { color: rgba(247,243,237,0.6); margin: 0 auto; }
+    .contact__inner {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 3rem;
+      align-items: start;
+      position: relative;
+    }
+
+    /* Form card */
+    .contact__form-card {
+      background: var(--ivory);
+      border-radius: var(--radius-xl);
+      padding: 2.75rem 3rem;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-field--full { grid-column: 1 / -1; }
+    .form-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.825rem 1.1rem;
+      background: var(--blanc);
+      border: 1.5px solid rgba(184,168,148,0.3);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      color: var(--anthracite);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      outline: none;
+    }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--vert);
+      box-shadow: 0 0 0 3px rgba(70,90,86,0.1);
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: rgba(116,105,92,0.5); }
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+    .form-select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23B8A894' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.875rem center;
+      padding-right: 2.5rem;
+    }
+    .form-submit-wrap { margin-top: 1.5rem; }
+    .btn--form {
+      width: 100%;
+      justify-content: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+    }
+    .form-microcopy {
+      text-align: center;
+      font-size: 0.775rem;
+      color: var(--taupe);
+      margin-top: 0.875rem;
+      line-height: 1.5;
+    }
+
+    /* Contact info panel */
+    .contact__info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .contact__img-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .contact__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .contact__details {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact__detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .contact__detail-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,237,0.4);
+    }
+    .contact__detail-value {
+      font-size: 0.9rem;
+      color: rgba(247,243,237,0.75);
+      font-style: italic;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--anthracite);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 3.5rem 0 2.5rem;
+    }
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+    .footer__brand {}
+    .footer__logo {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ivory);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.01em;
+    }
+    .footer__tagline {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 1.25rem;
+    }
+    .footer__brand-text {
+      font-size: 0.85rem;
+      color: rgba(247,243,237,0.45);
+      line-height: 1.65;
+      max-width: 32ch;
+    }
+    .footer__col-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 1.25rem;
+    }
+    .footer__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer__nav-link {
+      font-size: 0.875rem;
+      color: rgba(247,243,237,0.55);
+      transition: color 0.25s ease;
+    }
+    .footer__nav-link:hover { color: var(--ivory); }
+    .footer__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer__info-item {
+      font-size: 0.875rem;
+      color: rgba(247,243,237,0.55);
+    }
+    .footer__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer__mention {
+      font-size: 0.775rem;
+      color: rgba(247,243,237,0.3);
+      font-style: italic;
+    }
+    .footer__copy {
+      font-size: 0.775rem;
+      color: rgba(247,243,237,0.25);
+    }
+
+    /* Form success state */
+    .form-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 1rem;
+    }
+    .form-success.visible { display: flex; }
+    .form-success__icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(70,90,86,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-success__icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--vert);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .form-success__title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--anthracite);
+    }
+    .form-success__text {
+      font-size: 0.9rem;
+      color: var(--brun);
+    }
+
+    /* ============================================================
+       RESPONSIVE — TABLET (≤ 1024px)
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .header__nav { display: none; }
+      .header__cta { display: none; }
+      .header__burger { display: flex; }
+
+      .hero__inner {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        padding: 6.5rem 0 3rem;
+      }
+      .hero__img-container { aspect-ratio: 4/3; }
+      .hero__float-card { left: 1rem; }
+      .hero__visual-accent { display: none; }
+
+      .trust-bar__grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-item:nth-child(2)::after { display: none; }
+      .trust-item { padding: 1rem; }
+
+      .about__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .about__img-wrap { aspect-ratio: 4/3; }
+
+      .services__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 280px 280px;
+      }
+      .service-card:nth-child(1) { grid-column: 1 / 3; grid-row: 1; }
+      .service-card:nth-child(2) { grid-column: 1;     grid-row: 2; }
+      .service-card:nth-child(3) { grid-column: 2;     grid-row: 2; }
+      .service-card:nth-child(4) { grid-column: 1 / 3; grid-row: 3; }
+
+      .quality__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .quality__img-wrap { aspect-ratio: 4/3; }
+
+      .gallery-grid { columns: 2; }
+
+      .method__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .method__visual { position: static; }
+      .method__img-wrap { aspect-ratio: 16/9; }
+
+      .area__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .area__img-wrap { aspect-ratio: 4/3; }
+
+      .contact__inner { grid-template-columns: 1fr; }
+      .contact__info { order: -1; }
+      .contact__img-wrap { aspect-ratio: 16/9; }
+      .contact__details { display: none; }
+
+      .footer__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+      .footer__brand { grid-column: 1 / -1; }
+    }
+
+    /* ============================================================
+       RESPONSIVE — MOBILE (≤ 640px)
+    ============================================================ */
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      .section { padding: 4rem 0; }
+      .section--lg { padding: 5rem 0; }
+
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.7rem; }
+
+      .hero__inner { padding: 5.5rem 0 2.5rem; gap: 2.5rem; }
+      .hero__badge { font-size: 0.7rem; }
+      .hero__float-card { left: 0.75rem; bottom: 1.25rem; min-width: 140px; }
+      .hero__float-card-value { font-size: 0.9rem; }
+      .hero__ctas { flex-direction: column; }
+      .hero__ctas .btn { width: 100%; justify-content: center; }
+
+      .trust-bar__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .trust-item::after { display: none !important; }
+      .trust-item { padding: 0.75rem; }
+
+      .services__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .service-card:nth-child(n) {
+        grid-column: 1;
+        grid-row: auto;
+        height: 300px;
+      }
+
+      .form-grid { grid-template-columns: 1fr; }
+
+      .footer__inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
+
+      .contact__form-card { padding: 1.75rem 1.5rem; }
+
+      .gallery-grid { columns: 2; column-gap: 0.75rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       MOBILE OVERLAY
+  ============================================================ -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       MOBILE MENU
+  ============================================================ -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+    <ul class="mobile-menu__nav">
+      <li><a href="#accueil"     class="mobile-menu__link" data-close>Accueil</a></li>
+      <li><a href="#prestations" class="mobile-menu__link" data-close>Prestations</a></li>
+      <li><a href="#realisations" class="mobile-menu__link" data-close>Réalisations</a></li>
+      <li><a href="#methode"     class="mobile-menu__link" data-close>Méthode</a></li>
+      <li><a href="#contact"     class="mobile-menu__link" data-close>Contact</a></li>
+    </ul>
+    <div class="mobile-menu__footer">
+      <p class="mobile-menu__tagline">Peinture · Vitrerie · Finitions</p>
+      <a href="#contact" class="btn btn--primary btn--form" data-close>Demander un devis</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#accueil" class="header__logo" aria-label="PMS Finitions — accueil">
+          <span class="header__logo-name">PMS Finitions</span>
+          <span class="header__logo-sub">Peinture · Vitrerie · Finitions</span>
+        </a>
+        <nav class="header__nav" aria-label="Navigation principale">
+          <a href="#accueil"      class="header__nav-link">Accueil</a>
+          <a href="#prestations"  class="header__nav-link">Prestations</a>
+          <a href="#realisations" class="header__nav-link">Réalisations</a>
+          <a href="#methode"      class="header__nav-link">Méthode</a>
+          <a href="#contact"      class="header__nav-link">Contact</a>
+        </nav>
+        <a href="#contact" class="btn btn--primary header__cta">
+          Demander un devis
+          <svg class="btn-arrow" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"/></svg>
+        </a>
+        <button class="header__burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         SECTION 1 — HERO
+    ============================================================ -->
+    <section class="hero section" id="accueil" aria-label="Présentation PMS Finitions">
+      <div class="hero__texture" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero__inner">
+
+          <!-- Content -->
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+              <span class="hero__eyebrow-text">Peintre à Sautron — Loire-Atlantique</span>
+            </div>
+            <h1 class="hero__title">
+              Peinture, vitrerie<br>
+              et finitions <em>soignées</em><br>
+              à Sautron
+            </h1>
+            <p class="hero__subtitle">
+              PMS Finitions accompagne particuliers et professionnels dans leurs travaux de peinture, vitrerie et finitions autour de Nantes, avec une exigence simple : un résultat propre, durable et soigné.
+            </p>
+            <div class="hero__ctas">
+              <a href="#contact" class="btn btn--primary">
+                Demander un devis
+                <svg class="btn-arrow" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"/></svg>
+              </a>
+              <a href="#prestations" class="btn btn--secondary">Découvrir nos prestations</a>
+            </div>
+            <div class="hero__badges" aria-label="Points clés">
+              <span class="hero__badge"><span class="hero__badge-dot" aria-hidden="true"></span>Basé à Sautron</span>
+              <span class="hero__badge"><span class="hero__badge-dot" aria-hidden="true"></span>Intervention autour de Nantes</span>
+              <span class="hero__badge"><span class="hero__badge-dot" aria-hidden="true"></span>Particuliers &amp; professionnels</span>
+              <span class="hero__badge"><span class="hero__badge-dot" aria-hidden="true"></span>Travaux propres et soignés</span>
+            </div>
+          </div>
+
+          <!-- Visual -->
+          <div class="hero__visual">
+            <div class="hero__visual-accent" aria-hidden="true"></div>
+            <div class="hero__img-container">
+              <img
+                src="images/lot-01_images-principales/01_hero_interieur_premium.png"
+                alt="Peintre professionnel appliquant une peinture intérieure soignée à Sautron"
+                class="hero__img"
+                width="600"
+                height="750"
+              />
+            </div>
+            <!-- Floating badge -->
+            <div class="hero__float-card" aria-hidden="true">
+              <div class="hero__float-card-badge">
+                <span class="hero__float-card-dot"></span>
+                Entreprise locale
+              </div>
+              <div class="hero__float-card-value">Sautron · Nantes</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2 — TRUST BAR
+    ============================================================ -->
+    <section class="trust-bar" aria-label="Points de réassurance">
+      <div class="container">
+        <ul class="trust-bar__grid stagger-reveal" role="list">
+
+          <li class="trust-item">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0 1 15 0Z"/>
+              </svg>
+            </div>
+            <span class="trust-item__title">Entreprise locale</span>
+            <span class="trust-item__text">Basée à Sautron, proche de Nantes.</span>
+          </li>
+
+          <li class="trust-item">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+              </svg>
+            </div>
+            <span class="trust-item__title">Travail soigné</span>
+            <span class="trust-item__text">Une attention portée aux détails et aux finitions.</span>
+          </li>
+
+          <li class="trust-item">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
+              </svg>
+            </div>
+            <span class="trust-item__title">Chantier propre</span>
+            <span class="trust-item__text">Protection des espaces et intervention organisée.</span>
+          </li>
+
+          <li class="trust-item">
+            <div class="trust-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>
+              </svg>
+            </div>
+            <span class="trust-item__title">Devis adapté</span>
+            <span class="trust-item__text">Une réponse ajustée à chaque projet.</span>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — ABOUT
+    ============================================================ -->
+    <section class="about section--lg" id="a-propos">
+      <div class="container">
+        <div class="about__inner">
+
+          <!-- Image -->
+          <div class="reveal-left">
+            <div class="about__img-wrap">
+              <img
+                src="images/lot-01_images-principales/05_equipe_en_intervention.png"
+                alt="Équipe PMS Finitions en intervention sur un chantier de peinture"
+                class="about__img"
+                loading="lazy"
+                width="600"
+                height="800"
+              />
+              <div class="about__img-accent" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="reveal-right">
+            <span class="section-label">Notre entreprise</span>
+            <h2 class="section-title">Une entreprise locale au service de vos travaux de finition</h2>
+            <p class="about__body">
+              Basée à Sautron, PMS Finitions intervient auprès des particuliers et professionnels pour des travaux de peinture, vitrerie et finitions. L'entreprise met l'accent sur la qualité d'exécution, la préparation des supports et le soin apporté aux détails.
+            </p>
+            <p class="about__body">
+              Qu'il s'agisse de rafraîchir un intérieur, de valoriser une façade ou d'assurer des finitions propres sur un chantier, PMS Finitions privilégie une approche sérieuse, méthodique et adaptée à chaque besoin.
+            </p>
+            <ul class="about__stats" aria-label="Points essentiels">
+              <li class="about__stat">
+                <span class="about__stat-dot" aria-hidden="true"></span>
+                Entreprise basée à Sautron, Loire-Atlantique
+              </li>
+              <li class="about__stat">
+                <span class="about__stat-dot" aria-hidden="true"></span>
+                Intervention dans toute la zone de Nantes et alentours
+              </li>
+              <li class="about__stat">
+                <span class="about__stat-dot" aria-hidden="true"></span>
+                Travaux intérieurs et extérieurs, particuliers et professionnels
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4 — SERVICES / PRESTATIONS
+    ============================================================ -->
+    <section class="services section--lg" id="prestations">
+      <div class="container">
+        <header class="services__header reveal">
+          <span class="section-label">Nos prestations</span>
+          <h2>Des prestations claires pour vos intérieurs et extérieurs</h2>
+          <p class="section-subtitle" style="margin-top:1rem;">PMS Finitions accompagne vos projets de peinture, vitrerie et travaux de finition avec une approche simple : préparer correctement, intervenir proprement, livrer un résultat net.</p>
+        </header>
+
+        <div class="services__grid stagger-reveal" role="list">
+
+          <!-- Card 1 — Peinture intérieure -->
+          <article class="service-card" role="listitem">
+            <div class="service-card__img-wrap">
+              <img
+                src="images/lot-02_prestations/09_peinture_interieure_mur_clair.png"
+                alt="Peinture intérieure soignée sur mur clair à Sautron — PMS Finitions"
+                loading="lazy"
+                width="800"
+                height="500"
+              />
+            </div>
+            <div class="service-card__content">
+              <span class="service-card__tag">PMS Finitions</span>
+              <h3 class="service-card__title">Peinture intérieure</h3>
+              <p class="service-card__text">Préparation des supports, application soignée et finitions propres pour murs, plafonds et espaces intérieurs.</p>
+            </div>
+          </article>
+
+          <!-- Card 2 — Peinture extérieure -->
+          <article class="service-card" role="listitem">
+            <div class="service-card__img-wrap">
+              <img
+                src="images/lot-02_prestations/15_facade_avant_apres_suggeree.png"
+                alt="Travaux de peinture extérieure sur façade à Sautron — PMS Finitions"
+                loading="lazy"
+                width="400"
+                height="500"
+              />
+            </div>
+            <div class="service-card__content">
+              <span class="service-card__tag">PMS Finitions</span>
+              <h3 class="service-card__title">Peinture extérieure</h3>
+              <p class="service-card__text">Travaux de peinture extérieure pour protéger, rénover et valoriser les surfaces visibles du bâtiment.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 — Vitrerie -->
+          <article class="service-card" role="listitem">
+            <div class="service-card__img-wrap">
+              <img
+                src="images/lot-02_prestations/16_vitre_propre_posee.png"
+                alt="Pose et finition vitrerie autour des ouvertures — PMS Finitions Sautron"
+                loading="lazy"
+                width="400"
+                height="450"
+              />
+            </div>
+            <div class="service-card__content">
+              <span class="service-card__tag">PMS Finitions</span>
+              <h3 class="service-card__title">Vitrerie</h3>
+              <p class="service-card__text">Intervention sur les besoins courants en vitrerie, avec une attention particulière à la précision et aux finitions autour des ouvertures.</p>
+            </div>
+          </article>
+
+          <!-- Card 4 — Finitions -->
+          <article class="service-card" role="listitem">
+            <div class="service-card__img-wrap">
+              <img
+                src="images/lot-05_textures-assets-design/37_gros_plan_pinceau.png"
+                alt="Gros plan sur pinceau et détail de finition soignée — PMS Finitions"
+                loading="lazy"
+                width="800"
+                height="450"
+              />
+            </div>
+            <div class="service-card__content">
+              <span class="service-card__tag">PMS Finitions</span>
+              <h3 class="service-card__title">Travaux de finition</h3>
+              <p class="service-card__text">Reprises, lissages, détails et ajustements pour obtenir un rendu propre, homogène et durable.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5 — QUALITÉ
+    ============================================================ -->
+    <section class="quality section--lg" id="qualite">
+      <div class="container">
+        <div class="quality__inner">
+
+          <!-- Image -->
+          <div class="reveal-left">
+            <div class="quality__img-wrap">
+              <img
+                src="images/lot-06_optionnelles/41_artisan_de_dos_devant_mur_fini.png"
+                alt="Artisan PMS Finitions devant un mur parfaitement peint et fini"
+                loading="lazy"
+                width="700"
+                height="900"
+              />
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="reveal-right">
+            <span class="section-label">Qualité d'exécution</span>
+            <h2 class="section-title">Un travail propre, sérieux et maîtrisé</h2>
+            <p class="quality__body">
+              Dans les travaux de peinture et de finition, la qualité se voit dans les détails : supports bien préparés, lignes nettes, surfaces régulières, protections propres et rendu final homogène. PMS Finitions s'inscrit dans cette logique de soin et de rigueur.
+            </p>
+            <div class="quality__points">
+              <div class="quality-point">
+                <span class="quality-point__num">01</span>
+                <div class="quality-point__body">
+                  <h3 class="quality-point__title">Préparation des supports</h3>
+                  <p class="quality-point__text">Une finition réussie commence toujours par une base propre, saine et correctement préparée.</p>
+                </div>
+              </div>
+              <div class="quality-point">
+                <span class="quality-point__num">02</span>
+                <div class="quality-point__body">
+                  <h3 class="quality-point__title">Protection du chantier</h3>
+                  <p class="quality-point__text">Les espaces sont protégés pour garantir une intervention organisée et respectueuse du lieu.</p>
+                </div>
+              </div>
+              <div class="quality-point">
+                <span class="quality-point__num">03</span>
+                <div class="quality-point__body">
+                  <h3 class="quality-point__title">Détail des finitions</h3>
+                  <p class="quality-point__text">Angles, plinthes, encadrements et reprises sont traités avec attention pour un rendu net.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6 — GALERIE
+    ============================================================ -->
+    <section class="gallery section--lg" id="realisations">
+      <div class="container">
+        <header class="gallery__header reveal">
+          <span class="section-label">Inspirations de rendu</span>
+          <h2>Des finitions visibles dans chaque détail</h2>
+          <p class="section-subtitle" style="margin-top:1rem;">
+            Quelques aperçus pour illustrer la qualité attendue : murs propres, teintes harmonieuses, lignes nettes et espaces valorisés.
+          </p>
+        </header>
+
+        <div class="gallery-grid stagger-reveal">
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/25_salon_beige_renove.png" alt="Salon rénové aux tons beige — finition murale PMS Finitions" loading="lazy" width="500" height="420" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Intérieur rénové</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/26_entree_avec_moulures.png" alt="Entrée rénovée avec moulures peintes avec soin" loading="lazy" width="500" height="560" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Entrée rénovée</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/31_facade_terminee.png" alt="Façade extérieure terminée — peinture extérieure Sautron" loading="lazy" width="500" height="380" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Peinture extérieure</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/27_chambre_douce.png" alt="Chambre aux teintes douces — peinture intérieure soignée" loading="lazy" width="500" height="460" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Chambre douce</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/30_mur_accent_taupe.png" alt="Mur accent taupe — finition murale haut de gamme" loading="lazy" width="500" height="520" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Mur accent</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/28_bureau_moderne.png" alt="Bureau moderne repeint avec soin — peinture intérieure" loading="lazy" width="500" height="400" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Bureau moderne</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/32_fenetres_vitrerie_terminee.png" alt="Fenêtres et vitrerie terminées avec finitions nettes" loading="lazy" width="500" height="440" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Vitrerie terminée</span></div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="images/lot-04_galerie-realisations/29_couloir_renove.png" alt="Couloir rénové — peinture et finitions propres" loading="lazy" width="500" height="580" />
+            <div class="gallery-overlay"><span class="gallery-overlay-label">Couloir rénové</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 7 — MÉTHODE
+    ============================================================ -->
+    <section class="method section--lg" id="methode">
+      <div class="container">
+        <header class="method__header reveal">
+          <span class="section-label">Notre approche</span>
+          <h2>Une méthode simple, du premier échange à la livraison</h2>
+          <p class="section-subtitle" style="margin-top:1rem;">Un projet clair, une intervention organisée, un résultat propre.</p>
+        </header>
+
+        <div class="method__inner">
+
+          <!-- Steps -->
+          <div class="method__steps stagger-reveal" role="list">
+
+            <div class="method-step" role="listitem">
+              <div class="method-step__num" aria-hidden="true">01</div>
+              <div class="method-step__content">
+                <h3 class="method-step__title">Échange</h3>
+                <p class="method-step__text">Compréhension du besoin, du lieu, des contraintes et du résultat attendu.</p>
+              </div>
+            </div>
+
+            <div class="method-step" role="listitem">
+              <div class="method-step__num" aria-hidden="true">02</div>
+              <div class="method-step__content">
+                <h3 class="method-step__title">Estimation</h3>
+                <p class="method-step__text">Préparation d'une réponse adaptée au projet et aux travaux à réaliser.</p>
+              </div>
+            </div>
+
+            <div class="method-step" role="listitem">
+              <div class="method-step__num" aria-hidden="true">03</div>
+              <div class="method-step__content">
+                <h3 class="method-step__title">Préparation</h3>
+                <p class="method-step__text">Protection des espaces, préparation des supports et organisation du chantier.</p>
+              </div>
+            </div>
+
+            <div class="method-step" role="listitem">
+              <div class="method-step__num" aria-hidden="true">04</div>
+              <div class="method-step__content">
+                <h3 class="method-step__title">Réalisation</h3>
+                <p class="method-step__text">Application, reprises et finitions avec une attention constante portée au détail.</p>
+              </div>
+            </div>
+
+            <div class="method-step" role="listitem">
+              <div class="method-step__num" aria-hidden="true">05</div>
+              <div class="method-step__content">
+                <h3 class="method-step__title">Livraison</h3>
+                <p class="method-step__text">Vérification du rendu final et rangement propre de l'espace d'intervention.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Visual -->
+          <div class="method__visual reveal-right">
+            <div class="method__img-wrap">
+              <img
+                src="images/lot-03_methode-serieux/22_controle_finition.png"
+                alt="Contrôle qualité de la finition par PMS Finitions avant livraison du chantier"
+                loading="lazy"
+                width="480"
+                height="640"
+              />
+            </div>
+            <p class="method__caption">
+              Chaque chantier se conclut par une vérification soignée du rendu final.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 8 — ZONE D'INTERVENTION
+    ============================================================ -->
+    <section class="area section--lg" id="zone">
+      <div class="container">
+        <div class="area__inner">
+
+          <!-- Content -->
+          <div class="reveal-left">
+            <span class="section-label">Zone d'intervention</span>
+            <h2 class="section-title" style="margin-bottom:1rem;">Une entreprise implantée à Sautron, proche de Nantes</h2>
+            <p class="area__body">
+              PMS Finitions intervient à Sautron et dans les communes voisines pour les projets de peinture, vitrerie et finitions. Peintre autour de Nantes, l'entreprise accompagne particuliers et professionnels en Loire-Atlantique.
+            </p>
+            <iframe
+              class="area__map"
+              src="https://maps.google.com/maps?q=12+rue+du+Meunier%2C+44880+Sautron%2C+France&z=15&output=embed"
+              title="PMS Finitions — 12 rue du Meunier, 44880 Sautron"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="area__cities" role="list" aria-label="Communes d'intervention">
+              <span class="city-badge city-badge--main" role="listitem">Sautron</span>
+              <span class="city-badge" role="listitem">Nantes</span>
+              <span class="city-badge" role="listitem">Orvault</span>
+              <span class="city-badge" role="listitem">Saint-Herblain</span>
+              <span class="city-badge" role="listitem">Couëron</span>
+              <span class="city-badge" role="listitem">La Chapelle-sur-Erdre</span>
+              <span class="city-badge" role="listitem">Treillières</span>
+              <span class="city-badge" role="listitem">Carquefou</span>
+              <span class="city-badge" role="listitem">Et alentours</span>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="reveal-right">
+            <div class="area__img-wrap">
+              <img
+                src="images/lot-06_optionnelles/47_vue_exterieure_locale_generique.png"
+                alt="Vue extérieure locale représentant la zone d'intervention de PMS Finitions à Sautron"
+                loading="lazy"
+                width="480"
+                height="640"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 9 — CONTACT / DEVIS
+    ============================================================ -->
+    <section class="contact section--xl" id="contact">
+      <div class="container">
+
+        <header class="contact__header reveal">
+          <span class="section-label">Nous contacter</span>
+          <h2>Parlez-nous de votre projet</h2>
+          <p>Vous avez un projet de peinture, de vitrerie ou de finition ? Contactez PMS Finitions pour échanger sur vos besoins et obtenir une réponse adaptée.</p>
+        </header>
+
+        <div class="contact__inner">
+
+          <!-- Form card -->
+          <div class="contact__form-card reveal">
+
+            <!-- Success state (hidden by default) -->
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+              <div class="form-success__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <h3 class="form-success__title">Message envoyé</h3>
+              <p class="form-success__text">Nous avons bien reçu votre demande. Nous reviendrons vers vous dans les meilleurs délais.</p>
+            </div>
+
+            <!-- Form -->
+            <form id="contactForm" novalidate>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label class="form-label" for="nom">Nom <span aria-hidden="true">*</span></label>
+                  <input class="form-input" type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="name" required />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="telephone">Téléphone</label>
+                  <input class="form-input" type="tel" id="telephone" name="telephone" placeholder="Votre numéro" autocomplete="tel" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="email">Email <span aria-hidden="true">*</span></label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="Votre adresse email" autocomplete="email" required />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="type">Type de projet</label>
+                  <select class="form-select" id="type" name="type">
+                    <option value="" disabled selected>Sélectionner</option>
+                    <option value="peinture-interieure">Peinture intérieure</option>
+                    <option value="peinture-exterieure">Peinture extérieure</option>
+                    <option value="vitrerie">Vitrerie</option>
+                    <option value="finitions">Travaux de finition</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+                <div class="form-field form-field--full">
+                  <label class="form-label" for="message">Message <span aria-hidden="true">*</span></label>
+                  <textarea class="form-textarea" id="message" name="message" placeholder="Décrivez votre projet, le lieu, la surface approximative…" rows="5" required></textarea>
+                </div>
+              </div>
+              <div class="form-submit-wrap">
+                <button type="submit" class="btn btn--primary btn--form">
+                  Envoyer ma demande
+                  <svg class="btn-arrow" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"/></svg>
+                </button>
+                <p class="form-microcopy">Réponse adaptée selon votre projet et votre zone d'intervention.</p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Info panel -->
+          <div class="contact__info">
+            <div class="reveal-right">
+              <div class="contact__img-wrap">
+                <img
+                  src="images/lot-06_optionnelles/48_contact_devis_visuel.png"
+                  alt="Nuancier et outils pour demande de devis peinture — PMS Finitions"
+                  loading="lazy"
+                  width="480"
+                  height="640"
+                />
+              </div>
+            </div>
+            <div class="contact__details reveal">
+              <div class="contact__detail">
+                <span class="contact__detail-label">Entreprise</span>
+                <span class="contact__detail-value">PMS Finitions</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Localisation</span>
+                <span class="contact__detail-value">Sautron, Loire-Atlantique</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Téléphone</span>
+                <span class="contact__detail-value">À compléter</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Email</span>
+                <span class="contact__detail-value">À compléter</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <div class="footer__logo">PMS Finitions</div>
+          <div class="footer__tagline">Peinture · Vitrerie · Finitions</div>
+          <p class="footer__brand-text">
+            Entreprise locale de peinture, vitrerie et finitions basée à Sautron. Intervention autour de Nantes, Loire-Atlantique.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="footer__col" aria-label="Liens rapides">
+          <div class="footer__col-title">Navigation</div>
+          <ul class="footer__nav">
+            <li><a href="#accueil"      class="footer__nav-link">Accueil</a></li>
+            <li><a href="#prestations"  class="footer__nav-link">Prestations</a></li>
+            <li><a href="#realisations" class="footer__nav-link">Réalisations</a></li>
+            <li><a href="#methode"      class="footer__nav-link">Méthode</a></li>
+            <li><a href="#contact"      class="footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Infos -->
+        <div class="footer__col">
+          <div class="footer__col-title">Localisation</div>
+          <div class="footer__info">
+            <span class="footer__info-item">Sautron, Loire-Atlantique</span>
+            <span class="footer__info-item">Intervention autour de Nantes</span>
+            <span class="footer__info-item">Particuliers &amp; professionnels</span>
+            <span class="footer__info-item" style="margin-top:0.5rem;">Tél. : À compléter</span>
+            <span class="footer__info-item">Email : À compléter</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__mention">Site vitrine de présentation — informations à compléter avec l'entreprise.</p>
+        <p class="footer__copy">© 2025 PMS Finitions</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    'use strict';
+
+    /* ----- Header scroll effect ----- */
+    const header = document.getElementById('header');
+    const onScroll = () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ----- Mobile menu ----- */
+    const burgerBtn   = document.getElementById('burgerBtn');
+    const mobileMenu  = document.getElementById('mobileMenu');
+    const overlay     = document.getElementById('mobileOverlay');
+    let menuOpen = false;
+
+    const openMenu = () => {
+      menuOpen = true;
+      mobileMenu.classList.add('open');
+      overlay.classList.add('open');
+      burgerBtn.classList.add('open');
+      burgerBtn.setAttribute('aria-expanded', 'true');
+      burgerBtn.setAttribute('aria-label', 'Fermer le menu');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      burgerBtn.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+      burgerBtn.setAttribute('aria-label', 'Ouvrir le menu');
+      document.body.style.overflow = '';
+    };
+
+    burgerBtn.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+    overlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('[data-close]').forEach(el => {
+      el.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && menuOpen) closeMenu();
+    });
+
+    /* ----- Scroll reveal — IntersectionObserver ----- */
+    const revealEls   = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const staggerEls  = document.querySelectorAll('.stagger-reveal');
+
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => revealObs.observe(el));
+
+    const staggerObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const children = Array.from(entry.target.children);
+          children.forEach((child, i) => {
+            child.style.transitionDelay = `${i * 90}ms`;
+          });
+          entry.target.classList.add('visible');
+          staggerObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    staggerEls.forEach(el => staggerObs.observe(el));
+
+    /* ----- Method steps individual reveal ----- */
+    const methodSteps = document.querySelectorAll('.method-step');
+    const methodObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = Array.from(methodSteps).indexOf(entry.target);
+          entry.target.style.opacity = '0';
+          entry.target.style.transform = 'translateX(-16px)';
+          entry.target.style.transition = `opacity 0.6s ease ${idx * 100}ms, transform 0.6s cubic-bezier(0.16,1,0.3,1) ${idx * 100}ms`;
+          requestAnimationFrame(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateX(0)';
+          });
+          methodObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    methodSteps.forEach(el => methodObs.observe(el));
+
+    /* ----- Contact form submission (demo) ----- */
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+      /* Replace this block with your actual form submission logic */
+      contactForm.style.display = 'none';
+      formSuccess.classList.add('visible');
+    });
+
+    /* ----- Smooth scroll for anchor links ----- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = header.offsetHeight + 16;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
