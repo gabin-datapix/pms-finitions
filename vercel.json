@@ -1,0 +1,6 @@
+{
+  "name": "pms-finitions",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
